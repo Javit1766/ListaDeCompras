@@ -1,0 +1,107 @@
+/* Contenedor principal del formulario */
+.contenedor-formulario {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background: linear-gradient(145deg, #4b0082, #6a0dad); /* morados */
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 255, 128, 0.3); /* sombra verde neón */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.contenedor-formulario:hover {
+    transform: translateY(-3px);
+}
+
+/* Título */
+.contenedor-formulario h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00ff99; /* verde neón */
+    font-size: 1.8rem;
+}
+
+/* Total monto */
+.total-monto {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00ff99; /* verde neón */
+    font-size: 1.2rem;
+}
+
+/* Inputs */
+.contenedor-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.input-nombre,
+.input-precio {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    min-height: 45px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: text;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-nombre:focus,
+.input-precio:focus {
+    border-color: #00ff99;
+    box-shadow: 0 0 8px rgba(0, 255, 128, 0.7);
+}
+
+/* Botón agregar */
+.btn-agregar {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00ff99; /* verde neón */
+    color: #4b0082; /* morado oscuro */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-agregar:hover {
+    background-color: #32cd32; /* verde neón más intenso */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 255, 128, 0.6);
+}
+
+/* Lista de productos */
+.lista-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-producto {
+    padding: 12px 15px;
+    border-radius: 12px;
+    background-color: rgba(0, 255, 128, 0.1); /* verde neón transparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.item-producto:hover {
+    background-color: rgba(0, 255, 128, 0.2);
+    transform: translateX(3px);
+}
+
+/* Responsive incluido igual que antes */

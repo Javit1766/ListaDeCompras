@@ -1,25 +1,31 @@
-import { loadHtmlSectionDownload } from "./control/seccionDowland/dowland.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadHtmlSectionDownload();
-});
+import { Header } from "./componentes/header/headerComponents.js";
+import { seccion1 } from "./componentes/seccion1/seccion1Components.js";
+import { formularioCompras } from "./componentes/formulario/formularioComponents.js";
 import { obtenerProductos, guardarProductos } from "./control/miLocalStorage.js";
-import { header } from "./componentes/header/headerComponent.js";
-import { formularioCompras } from "./componentes/formulario/formularioComponent.js";
 
 function seccion() {
-    let productos = obtenerProductos();
+    let seccion = document.createElement('section');
+    seccion.className = 'todo';
 
-    if (!productos || productos.length === 0) {
-        productos = [];
-        guardarProductos(productos);
+    // Obtener lista del localStorage
+    let listaProductos = obtenerProductos();
+
+    // Inicializar localStorage si está vacío
+    if (!listaProductos || listaProductos.length === 0) {
+        listaProductos = [];
+        guardarProductos(listaProductos);
     }
 
-    const contenedor = document.createElement("div");
-    contenedor.appendChild(header());
-    contenedor.appendChild(formularioCompras());
+    console.log("Productos cargados:", listaProductos);
 
-    return contenedor;
+    // Renderizar componentes
+    seccion.appendChild(Header());
+    seccion.appendChild(seccion1());
+    seccion.appendChild(formularioCompras());
+
+    return seccion;
 }
 
-document.body.appendChild(seccion());
+// 🔹 Montamos en #root
+const root = document.querySelector('#root');
+root.appendChild(seccion());

@@ -1,0 +1,42 @@
+.header {
+    height: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0 20px;
+    background: linear-gradient(90deg, #6a0dad, #4b0082); /* morado degradado */
+    box-shadow: 0 2px 5px rgba(0, 255, 128, 0.5); /* sombra verde neón */
+    border-bottom: 2px solid #00ff99; /* verde neón */
+}
+
+.titulo1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ff99; /* verde neón */
+}
+
+.descarga {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descarga a {
+    text-decoration: none;
+    background: #00ff99; /* verde neón */
+    color: #4b0082; /* morado oscuro */
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.descarga a:hover {
+    background: #32cd32; /* verde neón intenso */
+    transform: scale(1.05);
+}
+
+/* Responsive igual que antes */
